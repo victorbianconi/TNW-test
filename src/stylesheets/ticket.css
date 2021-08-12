@@ -1,0 +1,114 @@
+.ticket {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 1 20rem;
+}
+
+.ticket_perks {
+    flex: 1 1 15rem;
+    width: auto;
+}
+
+.ticket_details {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 42vh;
+    overflow: hidden;
+}
+
+.ticket h1 {
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ticket h2 {
+    width: 80%;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    color:rgb(128, 128, 128);
+    margin-bottom: 2rem;
+    line-height: 1.9rem;
+}
+
+.ticket_prices_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket_price {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0rem 0.3rem;
+}
+
+#ticket_price_offer {
+    color:rgb(255, 102, 0);
+}
+
+#ticket_strikethrough_price {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color:rgb(182, 182, 182);
+    margin: 0rem 0.3rem;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+#ticket_vat {
+    opacity: 0.6;
+    font-size: 1rem;
+    margin: 0.2rem 0rem;
+}
+
+.register_now_btn {
+    padding: 1.6rem 3.3rem;
+    font-size: 1.3rem;
+    margin: 2rem 0rem;
+    border-radius: 2rem;
+    border: none;
+    background-color:rgb(212, 38, 175);
+    font-family: 'Montserrat';
+    color:white;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ticket_perks_container {
+    height: auto;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#ticket_perk_grey {
+    background-color: rgb(241, 241, 241);
+}
+
+.ticket_perk {
+    height: 5.5rem;
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ticket_perk p {
+    white-space: nowrap;
+    line-height: 2rem;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
