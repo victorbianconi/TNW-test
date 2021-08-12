@@ -1,0 +1,44 @@
+.perks_grid {
+    width: 100%;
+}
+
+
+.perk_row {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.grey_row {
+    background-color: rgb(238, 238, 238);
+}
+
+.perk_column {
+    padding: 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perk_column img {
+    opacity:0.5;
+}
+
+.perk_column_title {
+    padding: 1rem;
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.perk_column p, .perk_column_title p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    display:flex;
+    text-align: right;
+    line-height: 2rem;
+}

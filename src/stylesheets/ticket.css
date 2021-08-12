@@ -5,6 +5,28 @@
     flex-direction: column;
     width: 100%;
     flex: 1 1 20rem;
+    margin: 2rem 0rem;
+    height: auto;
+    animation:fadeIn 0.3s ease forwards;
+}
+
+#ticket_highlighted {
+    box-shadow: 0px 0px 20px grey;
+}
+
+.ticket_popular_choice {
+    padding:0.8rem;
+    margin-bottom: 1rem;
+    display:flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(255,0,160,1) 0%, rgba(239,0,255,1) 100%);
+    width: 100%;
+}
+
+.ticket_popular_choice {
+    font-size: 1.3rem;
+    color:white;
+    font-weight: 500;
 }
 
 .ticket_perks {
@@ -17,7 +39,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 42vh;
     overflow: hidden;
 }
 
@@ -49,7 +70,7 @@
 
 .ticket_price {
     font-size: 1.7rem;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0rem 0.3rem;
 }
 
@@ -74,7 +95,7 @@
 
 .register_now_btn {
     padding: 1.6rem 3.3rem;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin: 2rem 0rem;
     border-radius: 2rem;
     border: none;
@@ -111,4 +132,17 @@
     text-align: left;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+#invisible {
+    display:none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
