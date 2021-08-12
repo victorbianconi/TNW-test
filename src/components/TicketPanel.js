@@ -76,7 +76,7 @@ const TicketPanel = (props) => {
                  <div className="tickets_container">
                  <Ticket 
                     isEmpty
-                    ></Ticket>
+                  ></Ticket>
                  {tickets && (
                             tickets.map((ticket) => {
                                 return (
