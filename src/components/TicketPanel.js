@@ -10,6 +10,7 @@ import TNWLogo from '../images/tnw-logo.svg';
 const TicketPanel = (props) => {
         const [tickets, setTickets] = useState()
         const [ticketPerks, setTicketPerks] = useState()
+        const [title, setTitle] = useState()
         const [error, setError] = useState()
         
         useEffect(() => {
@@ -23,7 +24,8 @@ const TicketPanel = (props) => {
                 .then(res => res.json())
                 .then(data => {
                     setTickets(data.data[0].tickets);
-                    setTicketPerks(data.data[0].ticket_perks)
+                    setTicketPerks(data.data[0].ticket_perks);
+                    setTitle(data.data[0].title)
                 });
             } catch(err) {
                 setError(true);
@@ -35,7 +37,7 @@ const TicketPanel = (props) => {
             <div className="ticket_panel_container">
                 <div className="ticket_panel_title_subtitle_block">
                     <img style={{maxWidth: '12rem'}} src={TNWLogo}></img>
-                    <h1>Tickets</h1>
+                    {title && <h1>{title}</h1>}
                     <h2>Please choose one of the following tickets - Developed by <a target="_blank" href="https://www.victorbianconi.dev">www.victorbianconi.dev</a></h2>
                     {error && ( <p style={{color:'red', fontSize:'2rem'}}>Please try again.</p> )}
                 </div>
