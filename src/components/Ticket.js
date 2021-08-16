@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../stylesheets/ticket.css'
+import MobilePerks from './MobilePerks.js'
 
 const Ticket = (props) => {
              if(!props.isEmpty){
@@ -19,11 +20,14 @@ const Ticket = (props) => {
                         </div>
                         <p id="ticket_vat">ex. 21% VAT</p>
                         <a href={props.buttonLink} className="register_now_btn">{props.buttonLabel}</a>
-                    </div>   
+                    </div>
+                    {props.ticketPerks && (
+                        <MobilePerks index={props.index + 2} ticketPerks={props.ticketPerks}></MobilePerks>
+                    )}
                 </div>
              )} else {
                  return(
-                    <div className="ticket">
+                    <div id="empty_ticket" className="ticket">
                         <div className="ticket_details">   
                         </div>   
                     </div>

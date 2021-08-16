@@ -42,3 +42,16 @@
     text-align: right;
     line-height: 2rem;
 }
+
+@media screen and (max-width: 800px) { 
+    .perks_grid {
+        display:none;
+    }
+    .perks_grid_mobile {
+        width: 95%;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+  
+}

@@ -1,0 +1,26 @@
+.perks_grid_mobile {
+    display:none;
+}
+
+@media screen and (max-width: 800px) { 
+    .perks_grid_mobile {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perks_grid_mobile img {
+        opacity: 0.5;
+    }
+
+    .perk_row_mobile {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.8rem 2rem;
+        background-color: rgb(236, 236, 236);
+        margin: 0.5rem 0rem;
+        justify-content: space-between;
+        display:flex;
+    }
+  
+}

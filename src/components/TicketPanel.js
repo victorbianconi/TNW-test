@@ -22,6 +22,7 @@ const TicketPanel = (props) => {
                 response = await fetch("https://next.tnw-staging.com/next-api/tickets.json")
                 .then(res => res.json())
                 .then(data => {
+                    console.log(data)
                     setTickets(data.data[0].tickets);
                     setTicketPerks(data.data[0].ticket_perks)
                 });
@@ -30,6 +31,10 @@ const TicketPanel = (props) => {
                 throw err;
             }
         }
+
+        useEffect(() => {
+            console.log(tickets, ticketPerks)
+        }, [tickets,ticketPerks])
 
         return (
             <div className="ticket_panel_container">
@@ -53,10 +58,11 @@ const TicketPanel = (props) => {
                             <div className="ticket_loading"></div>
                         </div>
                     )}
-                    {tickets && (
-                            tickets.map((ticket) => {
+                    {tickets && ticketPerks && (
+                            tickets.map((ticket, index) => {
                                 return (
                                     <Ticket 
+                                    index={index}
                                     highlighted={ticket.ticketHighlighted}
                                     title={ticket.ticketName} 
                                     description={ticket.ticketDescription} 
@@ -65,6 +71,7 @@ const TicketPanel = (props) => {
                                     buttonLabel={ticket.ticketButtonLabel}
                                     buttonLink={ticket.ticketButtonLink}
                                     discount={ticket.ticketDiscount}
+                                    ticketPerks={ticketPerks}
                                     ></Ticket>
                                 )
                             })
@@ -73,10 +80,10 @@ const TicketPanel = (props) => {
                     {ticketPerks && (
                                     <Perks ticketPerks={ticketPerks}></Perks>
                     )}
-                 <div className="tickets_container">
+                 <div id="tickets_container_bottom" className="tickets_container">
                  <Ticket 
                     isEmpty
-                  ></Ticket>
+                 ></Ticket>
                  {tickets && (
                             tickets.map((ticket) => {
                                 return (
